@@ -261,7 +261,28 @@ function App() {
         <div className="footer-bottom"><div className="container"><span>© {new Date().getFullYear()} Prakavin Travels. All rights reserved.</span><a href="#home">Back to top ↑</a></div></div>
       </footer>
 
-      <a className="floating-whatsapp" href={`https://wa.me/${PHONE}?text=${encodeURIComponent("Hello Prakavin Travels, I would like to book a taxi.")}`} target="_blank" rel="noreferrer" aria-label="Contact Prakavin Travels on WhatsApp"><MessageCircle size={25} /></a>
+      
+{/* Floating WhatsApp Button */}
+<a
+  className="floating-whatsapp"
+  href={`https://wa.me/${PHONE}`}
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Chat on WhatsApp"
+>
+  <MessageCircle size={20} />
+</a>
+
+{/* Floating Call Button */}
+<a
+  href={`tel:${PHONE}`}
+  className="call-button"
+  aria-label="Call Prakavin Travels"
+>
+  <Phone size={20} />
+  <span>Call Now</span>
+</a>
+
     </div>
   );
 }
