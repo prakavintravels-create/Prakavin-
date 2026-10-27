@@ -11,6 +11,24 @@ const PHONE = "+916380772299"; // WhatsApp format: country code + number
 
 const EMAIL = "prakavintravels@gmail.com";
 
+const locations = [
+  "Dindigul, Tamil Nadu",
+  "Madurai, Tamil Nadu",
+  "Trichy, Tamil Nadu",
+  "Chennai, Tamil Nadu",
+  "Coimbatore, Tamil Nadu",
+  "Theni, Tamil Nadu",
+  "Palani, Tamil Nadu",
+  "Kodaikanal, Tamil Nadu",
+  "Salem, Tamil Nadu",
+  "Bengaluru, Karnataka",
+  "Tirunelveli, Tamil Nadu",
+  "Tiruppur, Tamil Nadu",
+  "Erode, Tamil Nadu",
+  "Karur, Tamil Nadu",
+  "Thanjavur, Tamil Nadu"
+];
+
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [trip, setTrip] = useState({
