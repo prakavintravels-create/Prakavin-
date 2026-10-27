@@ -8,10 +8,7 @@ import {
 import "./styles.css";
 
 const PHONE = "916380772299"; // WhatsApp format: country code + number
-<a href={`tel:+${PHONE}`} className="call-button">
-  <Phone size={20} />
-  Call Now
-</a>
+
 const EMAIL = "prakavintravels@gmail.com";
 
 function App() {
