@@ -80,7 +80,7 @@ function App() {
           <span>Comfortable rides. Clear communication. Every journey.</span>
           <a href={`tel:+${PHONE}`}><Phone size={14} /> +91 63807 72299</a>
         </div>
-      </div>
+      
 
       <header className="header">
         <div className="container nav">
