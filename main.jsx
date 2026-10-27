@@ -7,7 +7,7 @@ import {
 } from "lucide-react";
 import "./styles.css";
 
-const PHONE = "916380772299"; // WhatsApp format: country code + number
+const PHONE = "+916380772299"; // WhatsApp format: country code + number
 
 const EMAIL = "prakavintravels@gmail.com";
 
