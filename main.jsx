@@ -136,35 +136,6 @@ function App() {
                     <option>Outstation trip</option>
                   </select>
                 </label>
-<div className="location-field">
-                  
-<label>Pickup Location</label>
-<input
-  list="pickup-locations"
-  value={pickup}
-  onChange={(e) => setPickup(e.target.value)}
-  placeholder="Type pickup city..."
-  required
-/>
-<datalist id="pickup-locations">
-  {locations.map((place) => (
-    <option key={place} value={place} />
-  ))}
-</datalist>
-
-<label>Drop Location</label>
-<input
-  list="drop-locations"
-  value={drop}
-  onChange={(e) => setDrop(e.target.value)}
-  placeholder="Type destination city..."
-  required
-/>
-<datalist id="drop-locations">
-  {locations.map((place) => (
-    <option key={place} value={place} />
-  ))}
-</datalist>
 
   
                 </div>
