@@ -127,6 +127,8 @@ function App() {
                 <span className="booking-icon"><CarFront /></span>
               </div>
               <form onSubmit={bookTrip}>
+              
+              <form onSubmit={bookTrip}>
                 <label>Trip type
                   <select name="tripType" value={trip.tripType} onChange={update}>
                     <option>One-way drop</option>
@@ -137,16 +139,55 @@ function App() {
                   </select>
                 </label>
 
-  
+                <div className="location-field">
+                  <label htmlFor="pickup">Pickup Location</label>
+                  <input
+                    id="pickup"
+                    name="pickup"
+                    list="pickup-locations"
+                    value={trip.pickup}
+                    onChange={update}
+                    placeholder="Type pickup city..."
+                    required
+                  />
+                  <datalist id="pickup-locations">
+                    {locations.map((place) => (
+                      <option key={place} value={place} />
+                    ))}
+                  </datalist>
+
+                  <label htmlFor="drop">Drop Location</label>
+                  <input
+                    id="drop"
+                    name="drop"
+                    list="drop-locations"
+                    value={trip.drop}
+                    onChange={update}
+                    placeholder="Type destination city..."
+                    required
+                  />
+                  <datalist id="drop-locations">
+                    {locations.map((place) => (
+                      <option key={place} value={place} />
+                    ))}
+                  </datalist>
                 </div>
+
                 <div className="form-row">
                   <label>Travel date
-                    <span className="input-icon"><CalendarDays size={16} /><input type="date" name="date" value={trip.date} onChange={update} min={new Date().toISOString().split("T")[0]} /></span>
+                    <span className="input-icon">
+                      <CalendarDays size={16} />
+                      <input type="date" name="date" value={trip.date} onChange={update} min={new Date().toISOString().split("T")[0]} />
+                    </span>
                   </label>
                   <label>Pickup time
-                    <span className="input-icon"><Clock3 size={16} /><input type="time" name="time" value={trip.time} onChange={update} /></span>
+                    <span className="input-icon">
+                      <Clock3 size={16} />
+                      <input type="time" name="time" value={trip.time} onChange={update} />
+                    </span>
                   </label>
                 </div>
+
                 <label>Preferred vehicle
                   <select name="vehicle" value={trip.vehicle} onChange={update}>
                     <option>Any suitable car</option>
@@ -154,10 +195,17 @@ function App() {
                     <option>Toyota Innova Crysta</option>
                   </select>
                 </label>
-                <button className="button button-yellow book-submit" type="submit">Request booking on WhatsApp <MessageCircle size={18} /></button>
+
+                <button className="button button-yellow book-submit" type="submit">
+                  Request booking on WhatsApp <MessageCircle size={18} />
+                </button>
+
                 {notice && <p className="form-notice" role="status">{notice}</p>}
-                <p className="form-footnote">Your trip is a request until availability and fare are confirmed.</p>
+                <p className="form-footnote">
+                  Your trip is a request until availability and fare are confirmed.
+                </p>
               </form>
+
             </div>
           </div>
           <div className="hero-bottom">
