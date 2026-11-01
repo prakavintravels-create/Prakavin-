@@ -846,6 +846,28 @@ function App() {
         <Phone size={20} />
         <span>Call Now</span>
       </a>
+      {/* Dindigul SEO Section */}
+      <section 
+        className="dindigul-seo">
+      <h2>Best Taxi Service in Dindigul - Prakavin Travels</h2>
+      <p>
+      Prakavin Travels offers affordable and reliable taxi services in Dindigul and across Tamil Nadu.
+      Book one-way drop taxis, airport pickup and drop, outstation trips and packages.
+      </p>
+      <h3>Taxi Services from Dindigul</h3>
+      <p>
+      We provide taxi services from Dindigul to Chennai, Madurai, Coimbatore, Trichy and other destinations across Tamil Nadu.
+      </p>
+      <h3>Our Travel Services</h3>
+      <ul>
+      <li>One Way Drop Taxi</li>
+      <li>Airport Pickup and Drop</li>
+      <li>Outstation Taxi Services</li>
+      <li>Tour Packages</li>
+      </ul>
+      <p>
+      Contact Prakavin Travels for your next journey from Dindigul.Book your taxi today!</p>
+      </section>
     </div>
   );
 }
